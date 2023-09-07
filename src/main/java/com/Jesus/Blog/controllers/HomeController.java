@@ -1,7 +1,7 @@
-package com.company.project.controllers;
+package com.Jesus.Blog.controllers;
 
-import com.company.project.entity.Greeting;
-import com.company.project.repository.GreetingRepository;
+import com.Jesus.Blog.entity.Greeting;
+import com.Jesus.Blog.repository.GreetingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

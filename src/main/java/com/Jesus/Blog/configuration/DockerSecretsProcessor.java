@@ -1,4 +1,4 @@
-package com.company.project.configuration;
+package com.Jesus.Blog.configuration;
 
 import java.io.IOException;
 import java.nio.charset.Charset;

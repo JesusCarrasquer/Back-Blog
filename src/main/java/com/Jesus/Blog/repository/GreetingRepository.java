@@ -1,6 +1,6 @@
-package com.company.project.repository;
+package com.Jesus.Blog.repository;
 
-import com.company.project.entity.Greeting;
+import com.Jesus.Blog.entity.Greeting;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
