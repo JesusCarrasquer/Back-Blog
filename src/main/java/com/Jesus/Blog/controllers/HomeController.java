@@ -1,21 +1,27 @@
 package com.Jesus.Blog.controllers;
 
-import com.Jesus.Blog.entity.Greeting;
+import com.Jesus.Blog.entity.Post;
 import com.Jesus.Blog.repository.GreetingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 @RestController
 public class HomeController {
-
     @Autowired
     private GreetingRepository repository;
 
-    @GetMapping("/")
-    public Greeting showHome(String name, Model model) {
-        return repository.findById(1).orElse(new Greeting("Not Found 😕"));
+    @RequestMapping("/ramon")
+    public String showPosts(String name, Model model) {
+        List<Post> lista= (List<Post>) repository.findAll();
+        if(lista.isEmpty()) {
+            return "Mala suerte :(";
+        }
+        return lista.toString();
     }
 
 }
